@@ -73,7 +73,6 @@ void create_macro(void **data) {
     while (true) {
         libevdev_uinput_write_event(uidev, EV_KEY, code, 1);
         libevdev_uinput_write_event(uidev, EV_SYN, SYN_REPORT, 0);
-        // msleep(100);
         libevdev_uinput_write_event(uidev, EV_KEY, code, 0);
         libevdev_uinput_write_event(uidev, EV_SYN, SYN_REPORT, 0);
         msleep(delay);
