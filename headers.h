@@ -11,13 +11,3 @@
 #include <time.h>
 #include <stdbool.h>
 
-int msleep(long m) {
-    struct timespec rem;
-    struct timespec request = {
-        (int)(m/1000),
-        (m%1000)*1000000
-    };
-    return nanosleep(&request,&rem);
-}
-
-
